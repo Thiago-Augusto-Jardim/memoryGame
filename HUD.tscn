@@ -1,0 +1,135 @@
+[gd_scene load_steps=8 format=3 uid="uid://cwrr4oo3t4jqh"]
+
+[ext_resource type="FontFile" uid="uid://ew31dr66pcrf" path="res://assets/fonts/Nunito-Bold.ttf" id="1"]
+[ext_resource type="Texture2D" uid="uid://bpxwg2tsl0fun" path="res://assets/ui/return.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://do0jyw0y0v7ke" path="res://assets/ui/pause.png" id="3"]
+[ext_resource type="Theme" uid="uid://dxm14tnix12s2" path="res://Theme.tres" id="4"]
+[ext_resource type="Script" path="res://ButtonPause.gd" id="5"]
+
+[sub_resource type="FontFile" id="1"]
+fallbacks = Array[Font]([ExtResource("1"), ExtResource("1")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[sub_resource type="FontFile" id="2"]
+fallbacks = Array[Font]([ExtResource("1"), ExtResource("1")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.43195
+offset_top = 1.43198
+offset_right = -1.43188
+offset_bottom = 1.43201
+mouse_filter = 2
+theme = ExtResource("4")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 580.0
+offset_right = -40.0
+offset_bottom = -40.0
+
+[node name="Sections" type="HBoxContainer" parent="Panel"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="SectionScore" type="VBoxContainer" parent="Panel/Sections"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Panel/Sections/SectionScore"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+theme_override_fonts/font = SubResource("1")
+text = "ACERTOS:"
+
+[node name="score" type="Label" parent="Panel/Sections/SectionScore"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+theme_override_fonts/font = SubResource("2")
+text = "##"
+
+[node name="SectionTimer" type="VBoxContainer" parent="Panel/Sections"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Panel/Sections/SectionTimer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+theme_override_fonts/font = SubResource("1")
+text = "TEMPO:"
+
+[node name="seconds" type="Label" parent="Panel/Sections/SectionTimer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+theme_override_fonts/font = SubResource("2")
+text = "##"
+
+[node name="SectionMoves" type="VBoxContainer" parent="Panel/Sections"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Panel/Sections/SectionMoves"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+theme_override_fonts/font = SubResource("1")
+text = "PARES ENCONTRADOS:"
+
+[node name="moves" type="Label" parent="Panel/Sections/SectionMoves"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+theme_override_fonts/font = SubResource("2")
+text = "##"
+
+[node name="SectionButtons" type="VBoxContainer" parent="Panel/Sections"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.31
+
+[node name="ButtonPause" type="TextureButton" parent="Panel/Sections/SectionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("3")
+stretch_mode = 5
+script = ExtResource("5")
+
+[node name="ButtonReset" type="TextureButton" parent="Panel/Sections/SectionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2")
+stretch_mode = 5

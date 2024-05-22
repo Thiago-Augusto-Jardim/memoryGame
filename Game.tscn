@@ -1,0 +1,75 @@
+[gd_scene load_steps=3 format=3 uid="uid://mfuxmt404ran"]
+
+[ext_resource type="Script" path="res://Game.gd" id="1"]
+[ext_resource type="PackedScene" path="res://HUD.tscn" id="2"]
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.113725, 0.286275, 0.184314, 1)
+
+[node name="grid" type="GridContainer" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = -40.0
+offset_bottom = -240.0
+columns = 13
+
+[node name="HUD" parent="." instance=ExtResource("2")]
+anchors_preset = 0
+
+[node name="Panel" parent="HUD" index="0"]
+layout_mode = 0
+
+[node name="Sections" parent="HUD/Panel" index="0"]
+layout_mode = 0
+
+[node name="SectionScore" parent="HUD/Panel/Sections" index="0"]
+layout_mode = 2
+
+[node name="Label" parent="HUD/Panel/Sections/SectionScore" index="0"]
+layout_mode = 2
+
+[node name="score" parent="HUD/Panel/Sections/SectionScore" index="1"]
+layout_mode = 2
+
+[node name="SectionTimer" parent="HUD/Panel/Sections" index="1"]
+layout_mode = 2
+
+[node name="Label" parent="HUD/Panel/Sections/SectionTimer" index="0"]
+layout_mode = 2
+
+[node name="seconds" parent="HUD/Panel/Sections/SectionTimer" index="1"]
+layout_mode = 2
+
+[node name="SectionMoves" parent="HUD/Panel/Sections" index="2"]
+layout_mode = 2
+
+[node name="Label" parent="HUD/Panel/Sections/SectionMoves" index="0"]
+layout_mode = 2
+text = "TENTATIVAS:"
+
+[node name="moves" parent="HUD/Panel/Sections/SectionMoves" index="1"]
+layout_mode = 2
+
+[node name="SectionButtons" parent="HUD/Panel/Sections" index="3"]
+layout_mode = 2
+
+[node name="ButtonPause" parent="HUD/Panel/Sections/SectionButtons" index="0"]
+layout_mode = 2
+
+[node name="ButtonReset" parent="HUD/Panel/Sections/SectionButtons" index="1"]
+layout_mode = 2
+
+[editable path="HUD"]
