@@ -11,8 +11,8 @@ Nesta organização, temos algumas imagens anexadas que serão utilizadas no jog
 
 - Tabuleiro de cartas dinâmico
 - Animações suaves
-- Contagem de movimentos
-- Contagem regressiva de tempo (você terá 20 segundos para memorizar)
+- Contagem de movimentos (Tentativas)
+- Contagem de tempo
 
 ## Requisitos do Sistema 
 
