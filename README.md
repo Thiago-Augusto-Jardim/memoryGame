@@ -29,7 +29,9 @@ Nesta organização, temos algumas imagens anexadas que serão utilizadas no jog
 
 ## Capturas de Tela
 
-
+![Inicio do Jogo](C:\Users\matca\Downloads\Screenshot_1.png)
+![Meio do Jogo](C:\Users\matca\Downloads\Screenshot_2.png)
+![Final do Jogo](C:\Users\matca\Downloads\Screenshot_3.png)
 
 ## Contribuição
 
