@@ -29,8 +29,10 @@ Nesta organização, temos algumas imagens anexadas que serão utilizadas no jog
 
 ## Capturas de Tela
 
-![Inicio do Jogo](C:\Users\matca\Downloads\Screenshot_1.png)
-![Meio do Jogo](C:\Users\matca\Downloads\Screenshot_2.png)
+![Inicio do Jogo]![inicial](https://github.com/godot-projectUWMJ-2024-1/memoryGame/assets/77214119/62d273a6-5be2-49dc-8830-9a131ed075ff)
+
+![Meio do Jogo]![image](https://github.com/godot-projectUWMJ-2024-1/memoryGame/assets/77214119/edfe723a-b35d-4334-9023-8384cc00ff8b)
+
 ![Final do Jogo](C:\Users\matca\Downloads\Screenshot_3.png)
 
 ## Contribuição
